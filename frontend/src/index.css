@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Theme transitions */
+* {
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out,
+    color 200ms ease-in-out;
+}
+
+/* Base theme settings */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Ensure the app takes full height */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme background colors */
+body {
+  background-color: rgb(243 244 246); /* bg-gray-100 */
+}
+
+body.dark {
+  background-color: rgb(17 24 39); /* bg-gray-900 */
+}
+/* --- CSS to hide browser's default clear button for search inputs --- */
+/* Add these rules here */
+
+/* For Webkit-based browsers (Chrome, Safari, Edge Chromium) */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* For older Internet Explorer / Edge */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Additional reset that can help ensure cross-browser consistency for search inputs */
+input[type="search"] {
+  -moz-appearance: textfield; /* For Firefox */
+  -webkit-appearance: textfield; /* Reinforce for Webkit */
+  appearance: textfield;
+}
+/* --- End of CSS for hiding search input X button --- */
+
+/* Custom scrollbar styles (your existing ones) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px; /* Further increased width of the scrollbar */
+  height: 10px; /* Further increased height of the scrollbar for horizontal scrollbars */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(156 163 175); /* bg-gray-400 */
+  border-radius: 9999px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(75 85 99); /* bg-gray-600 */
+}
+
+/* =============================================================================== */
