@@ -68,7 +68,7 @@ The Django backend provides a robust API for all CRM functionalities.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/avi-poptani-003/CustoFlow.git
     cd Backend
     ```
 2.  **Create and activate a virtual environment:**
